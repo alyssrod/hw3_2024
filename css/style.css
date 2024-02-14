@@ -126,20 +126,77 @@ nav a:focus {
 }
 
 /* Step 3: Write selector/rule property to style all elements when in focus*/
-
+*:focus{
+  outline: 0; 
+  border: 2px solid rgb(0,0,0); 
+}
 
 
 /* Step 4: Write selector/rule property to style the container */
-
+.container{ 
+  display: grid; 
+  grid-template-columns: 1fr 5fr 1fr; 
+  gap: 15px;
+}
 
 /* Step 5: Write selector/rule property to add the background image to the 
 first div in the grid  and place it in the grid. */
-
+.container div: first-child {
+  background-image: url('../images/header.jpg');
+  grid-column: 1/-1;
+  background-attachment: fixed;
+  background-size: cover;
+}
 
 
 /* Steps 6 and 7: Write the selector/rule properties to add place the next elements in the next
  four rows in the grid. */
+.about { 
+  grid-row: 2; 
+  grid-column: 2/span 1; 
+}
+.method {
+  grid-row: 3;
+  grid-column: 2/span 1;
+}
 
+.clients {
+  grid-row: 4;
+  grid-column: 2/span 1;
+}
+
+.contact {
+  grid-row: 5;
+  grid-column: 2/span 1;
+}
+
+.about-image {
+  max-height: 600px;
+  grid-column: 1/4;
+  grid-row: 2;
+  overflow: hidden;
+}
+
+.method-image {
+  max-height: 600px;
+  grid-column: 1/4;
+  grid-row: 3;
+  overflow: hidden;
+}
+
+.clients-image {
+  max-height: 600px;
+  grid-column: 1/4;
+  grid-row: 4;
+  overflow: hidden;
+}
+
+.contact-image {
+  max-height: 600px;
+  grid-column: 1/4;
+  grid-row: 5;
+  overflow: hidden;
+}
       /*This will be a lot of rules.... but be strategic and combine seletors*/
 
 
